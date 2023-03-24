@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ROP.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -20,7 +21,7 @@ namespace ROP
                 RomanNumeral.ConvertToI(input)
                 .OnSuccess((x) => output = x)
                 .OnFailure((err) => Console.WriteLine(err.Message));
-            if(output == "N")
+            if(output == Constants.NO)
             {
                 return output;
             }
@@ -35,7 +36,7 @@ namespace ROP
                 .OnSuccess((x) => RomanNumeral.ReplaceDWithM(x))
                 .OnSuccess((x) => Console.WriteLine($"{input} in Roman Numerals is: {x}"));
 
-            return "Y";
+            return Constants.YES;
         }
     }
 }
