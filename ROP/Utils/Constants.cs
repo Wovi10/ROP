@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace ROP.Utils
 {
-    internal static class Constants
+    public static class Constants
     {
-        internal static readonly string EMPTY = "";
+        public static readonly string EMPTY = "";
 
-        internal static readonly string I = "I";
-        internal static readonly string V = "V";
-        internal static readonly string X = "X";
-        internal static readonly string L = "L";
-        internal static readonly string C = "C";
-        internal static readonly string D = "D";
-        internal static readonly string M = "M";
+        public static readonly string I = "I";
+        public static readonly string V = "V";
+        public static readonly string X = "X";
+        public static readonly string L = "L";
+        public static readonly string C = "C";
+        public static readonly string D = "D";
+        public static readonly string M = "M";
 
-        internal static readonly string IToReplace = "IIIII";
-        internal static readonly string VToReplace = "VV";
-        internal static readonly string XToReplace = "XXXXX";
-        internal static readonly string LToReplace = "LL";
-        internal static readonly string CToReplace = "CCCCC";
-        internal static readonly string DToReplace = "DD";
+        public static readonly string IToReplace = "IIIII";
+        public static readonly string VToReplace = "VV";
+        public static readonly string XToReplace = "XXXXX";
+        public static readonly string LToReplace = "LL";
+        public static readonly string CToReplace = "CCCCC";
+        public static readonly string DToReplace = "DD";
 
-        internal static readonly string YES = "Y";
-        internal static readonly string NO = "N";
+        public static readonly string YES = "Y";
+        public static readonly string NO = "N";
     }
 }
