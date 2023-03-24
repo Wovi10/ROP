@@ -7,9 +7,9 @@ using ROP.Utils;
 
 namespace ROP
 {
-    internal class RomanNumeral
+    public class RomanNumeral
     {
-        internal static Either<string, Exception> ConvertToI(string input)
+        public static Either<string, Exception> ConvertToI(string input)
         {
             if (input.ToUpper() == Constants.NO)
             {
