@@ -11,7 +11,7 @@ namespace ROP
     {
         internal static Either<string, Exception> ConvertToI(string input)
         {
-            if (input.ToUpper() == "N")
+            if (input.ToUpper() == Constants.NO)
             {
                 return input.ToUpper();
             }
@@ -22,41 +22,41 @@ namespace ROP
             }
 
             var inputAsNum = int.Parse(input);
-            var output = "";
+            var output = Constants.EMPTY;
             for (int i = 0; i < inputAsNum; i++)
-                output += "I";
+                output += Constants.I;
 
             return output;
         }
 
         internal static Either<string, Exception> ReplaceIWithV(string input)
         {
-            return input.Replace("IIIII", "V");
+            return input.Replace(Constants.IToReplace, Constants.V);
         }
 
         internal static Either<string, Exception> ReplaceVWithX(string input)
         {
-            return input.Replace("VV", "X");
+            return input.Replace(Constants.VToReplace, Constants.X);
         }
 
         internal static Either<string, Exception> ReplaceXWithL(string input)
         {
-            return input.Replace("XXXXX", "L");
+            return input.Replace(Constants.XToReplace, Constants.L);
         }
         
         internal static Either<string, Exception> ReplaceLWithC(string input)
         {
-            return input.Replace("LL", "C");
+            return input.Replace(Constants.LToReplace, Constants.C);
         }
         
         internal static Either<string, Exception> ReplaceCWithD(string input)
         {
-            return input.Replace("CCCCC", "D");
+            return input.Replace(Constants.CToReplace, Constants.D);
         }
         
         internal static Either<string, Exception> ReplaceDWithM(string input)
         {
-            return input.Replace("DD", "M");
+            return input.Replace(Constants.DToReplace, Constants.M);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ROP
             //var result = RomanNumeral.ConvertToI(input)
             //             .OnFailure((err) => Console.WriteLine(err.Message));
 
-            string output = "";
+            string output = Constants.EMPTY;
             var result =
                 RomanNumeral.ConvertToI(input)
                 .OnSuccess((x) => output = x)
