@@ -18,7 +18,7 @@ namespace ROP.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod()]
         public void RunCode_N_ReturnsN()
         {
@@ -29,7 +29,7 @@ namespace ROP.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod()]
         public void RunCode_wrongInput_ReturnsN()
         {

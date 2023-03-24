@@ -19,7 +19,7 @@ namespace ROP.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
         [TestMethod()]
         public void ConvertToI_N_ReturnsN()
         {

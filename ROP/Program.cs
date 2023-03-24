@@ -12,19 +12,12 @@ do
     RomanNumeralsProgram.RunCode(numToConv)
         .OnSuccess((x) => HandleOutput(numToConv, x))
         .OnFailure((err) => Console.WriteLine(err.Message));
-
 } while (wantToContinue != Constants.NO);
 
 Either<string, Exception> HandleOutput(string numToConv, string input)
 {
-    if (input == Constants.NO)
-    {
-        wantToContinue = Constants.NO;
-    }
-    else
-    {
-        Console.WriteLine($"{numToConv} in Roman Numerals is {input}");
-    }
+    if (input == Constants.NO) wantToContinue = Constants.NO;
+    else Console.WriteLine($"{numToConv} in Roman Numerals is {input}");
 
     return wantToContinue;
 }

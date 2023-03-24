@@ -11,7 +11,7 @@ namespace ROP
                 return input.ToUpper();
             }
 
-            if (int.TryParse(input, out _) == false) 
+            if (int.TryParse(input, out _) == false)
             {
                 return new Exception("This is not a number.");
             }
@@ -38,17 +38,17 @@ namespace ROP
         {
             return input.Replace(Constants.XToReplace, Constants.L);
         }
-        
+
         internal static Either<string, Exception> ReplaceLWithC(string input)
         {
             return input.Replace(Constants.LToReplace, Constants.C);
         }
-        
+
         internal static Either<string, Exception> ReplaceCWithD(string input)
         {
             return input.Replace(Constants.CToReplace, Constants.D);
         }
-        
+
         internal static Either<string, Exception> ReplaceDWithM(string input)
         {
             return input.Replace(Constants.DToReplace, Constants.M);
