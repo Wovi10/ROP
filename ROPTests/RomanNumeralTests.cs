@@ -1,11 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ROP;
-using ROP.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Utils;
 
 namespace ROP.Tests
 {
@@ -34,8 +28,7 @@ namespace ROP.Tests
 
             string actual = Constants.EMPTY;
             RomanNumeral.ConvertToI(input)
-                .OnSuccess((x) => actual = x)
-                .OnFailure((err) => actual = err.Message);
+                .OnSuccess((x) => actual = x);
 
             Assert.AreEqual(expected, actual);
         }

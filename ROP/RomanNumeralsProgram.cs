@@ -1,42 +1,20 @@
-﻿using ROP.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using Utils;
 
 namespace ROP
 {
-    internal static class RomanNumeralsProgram
+    public static class RomanNumeralsProgram
     {
-        internal static string RunCode(string input)
+        public static Either<string, Exception> RunCode(string input)
         {
-            //var result = RomanNumeral.ConvertToI(input)
-            //             .OnFailure((err) => Console.WriteLine(err.Message));
-
-            string output = Constants.EMPTY;
-            var result =
-                RomanNumeral.ConvertToI(input)
-                .OnSuccess((x) => output = x)
-                .OnFailure((err) => Console.WriteLine(err.Message));
-            if(output == Constants.NO)
-            {
-                return output;
-            }
-
-            result
-                .OnSuccess((x) => Console.WriteLine($"Converting {input} to Roman Numerals"))
+            var result = RomanNumeral.ConvertToI(input)
                 .OnSuccess((x) => RomanNumeral.ReplaceIWithV(x))
                 .OnSuccess((x) => RomanNumeral.ReplaceVWithX(x))
                 .OnSuccess((x) => RomanNumeral.ReplaceXWithL(x))
                 .OnSuccess((x) => RomanNumeral.ReplaceLWithC(x))
                 .OnSuccess((x) => RomanNumeral.ReplaceCWithD(x))
-                .OnSuccess((x) => RomanNumeral.ReplaceDWithM(x))
-                .OnSuccess((x) => Console.WriteLine($"{input} in Roman Numerals is: {x}"));
+                .OnSuccess((x) => RomanNumeral.ReplaceDWithM(x));
 
-            return Constants.YES;
+            return result;
         }
     }
 }
