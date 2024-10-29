@@ -1,46 +1,47 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Utils;
+using ROP;
 
-namespace ROP.Tests
+namespace ROPTests;
+
+[TestClass]
+public class RomanNumeralsProgramTests
 {
-    [TestClass()]
-    public class RomanNumeralsProgramTests
+    [TestMethod]
+    public void RunCode_1666_ReturnsMDCLXVI()
     {
-        [TestMethod()]
-        public void RunCode_1666_ReturnsMDCLXVI()
-        {
-            var input = "1666";
-            var expected = "MDCLXVI";
+        const string input = "1666";
+        const string expected = "MDCLXVI";
 
-            string actual = Constants.EMPTY;
-            RomanNumeralsProgram.RunCode(input)
-                .OnSuccess((x) => actual = x);
+        var actual = string.Empty;
+        input
+            .ConvertToRoman()
+            .OnSuccess(x => actual = x);
 
-            Assert.AreEqual(expected, actual);
-        }
+        Assert.AreEqual(expected, actual);
+    }
 
-        [TestMethod()]
-        public void RunCode_N_ReturnsN()
-        {
-            var input = "n";
-            var expected = "N";
+    [TestMethod]
+    public void RunCode_N_ReturnsN()
+    {
+        const string input = "n";
+        const string expected = "N";
 
-            var actual = RomanNumeralsProgram.RunCode(input);
+        var actual = input.ConvertToRoman();
 
-            Assert.AreEqual(expected, actual);
-        }
+        Assert.AreEqual(expected, actual);
+    }
 
-        [TestMethod()]
-        public void RunCode_wrongInput_ReturnsN()
-        {
-            var input = "wrongInput";
-            var expected = typeof(Exception);
+    [TestMethod]
+    public void RunCode_wrongInput_ReturnsException()
+    {
+        const string input = "wrongInput";
+        var expected = typeof(Exception);
 
-            Exception actual = null;
-            RomanNumeral.ConvertToI(input)
-                .OnFailure((err) => actual = err);
+        Exception? actual = null;
+        input
+            .ConvertToRoman()
+            .OnFailure(err => actual = err);
 
-            Assert.AreEqual(expected, actual.GetType());
-        }
+        Assert.AreEqual(expected, actual?.GetType());
     }
 }

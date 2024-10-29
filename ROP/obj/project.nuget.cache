@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "xOfHz9wSGRu8TfPDqAHHscvy66Ut4Dm0pImoEqM5MzzA6FETMfw5BjkwMOea1suN2hk9ekjuZLEusCNka5KTHA==",
+  "dgSpecHash": "9pUDg0WIwxyZirxbH9nz0YUDm/9Jxbl5MJHQAALF7QL+nn9y/FeDLtiOcjv2tAky14pXxLCI95l8PgHrI/7Rvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\ROP.csproj",
+  "projectFilePath": "D:\\GitHub\\ROP\\ROP\\ROP.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nexus.dev.coteng.com:8081/repository/nuget-hosted/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

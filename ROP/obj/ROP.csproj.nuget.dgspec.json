@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\ROP.csproj": {}
+    "D:\\GitHub\\ROP\\ROP\\ROP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\ROP.csproj": {
+    "D:\\GitHub\\ROP\\ROP\\ROP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\ROP.csproj",
+        "projectUniqueName": "D:\\GitHub\\ROP\\ROP\\ROP.csproj",
         "projectName": "ROP",
-        "projectPath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\ROP.csproj",
-        "packagesPath": "C:\\Users\\WoutVinckevleugel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\ROP\\obj\\",
+        "projectPath": "D:\\GitHub\\ROP\\ROP\\ROP.csproj",
+        "packagesPath": "C:\\Users\\wout\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\ROP\\ROP\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WoutVinckevleugel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wout\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nexus.dev.coteng.com:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\Utils.csproj"
+              "D:\\GitHub\\ROP\\Utils\\Utils.csproj": {
+                "projectPath": "D:\\GitHub\\ROP\\Utils\\Utils.csproj"
               }
             }
           }
@@ -59,21 +65,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\Utils.csproj": {
+    "D:\\GitHub\\ROP\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\Utils.csproj",
+        "projectUniqueName": "D:\\GitHub\\ROP\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\WoutVinckevleugel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WoutVinckevleugel\\Documents\\GitHub\\ROP\\Utils\\obj\\",
+        "projectPath": "D:\\GitHub\\ROP\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\wout\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\ROP\\Utils\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\WoutVinckevleugel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wout\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,6 +91,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://nexus.dev.coteng.com:8081/repository/nuget-hosted/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
