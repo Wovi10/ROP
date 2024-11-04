@@ -24,7 +24,11 @@ public static class RomanNumeral
     }
 
     public static Result<string, Exception> Sanitise(this string input)
-        => input.StripLeadingZeroes();
+    {
+        var result = input.StripLeadingZeroes();
+
+        return result.Length == 0 ? new NoZeroException() : result;
+    }
 
     private static string StripLeadingZeroes(this string input)
     {
@@ -97,7 +101,6 @@ public static class RomanNumeral
             .OnSuccess(ReplaceXWithXL) // 40
             .OnSuccess(ReplaceIWithIX) // 9
             .OnSuccess(ReplaceIWithIV); // 4
-
     }
 
     public static Result<string, Exception> ConvertToI(this int input)
